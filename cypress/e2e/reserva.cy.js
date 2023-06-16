@@ -1,13 +1,15 @@
+const groupPage = require("./pages/groupPage");
 const homePage = require("./pages/homePage");
 
-describe("template spec", () => {
+describe("unidas reservation", () => {
   before(() => {
     cy.visit("/");
   });
 
-  it("reserva veículo", () => {
+  it("iniciar reserva", () => {
     homePage.selecionaLocalRetirada("Copacabana");
     homePage.selecionaDataDaReserva();
     homePage.clicaEmAlugar();
+    groupPage.tituloPaginaExibido();
   });
 });
