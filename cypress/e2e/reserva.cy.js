@@ -1,5 +1,13 @@
+const homePage = require("./pages/homePage");
+
 describe("template spec", () => {
+  before(() => {
+    cy.visit("/");
+  });
+
   it("reserva veículo", () => {
-    cy.visit("www.unidas.com.br");
+    homePage.selecionaLocalRetirada("Copacabana");
+    homePage.selecionaDataDaReserva();
+    homePage.clicaEmAlugar();
   });
 });
