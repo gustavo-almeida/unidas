@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gustavo-almeida/unidas/issues"
   },
-  "homepage": "https://github.com/gustavo-almeida/unidas#readme"
+  "homepage": "https://github.com/gustavo-almeida/unidas#readme",
+  "devDependencies": {
+    "cypress": "^12.14.0"
+  }
 }
