@@ -1,4 +1,4 @@
-class groupPage {
+class resumePage {
   elements = {
     title: () => cy.contains("Resumo da reserva"),
     selectCarbonoNeutro: () =>
@@ -34,8 +34,8 @@ class groupPage {
   }
 
   clicarBotaoAvancar() {
-    this.buttonAvancar().click();
+    this.elements.buttonAvancar().click();
   }
 }
 
-module.exports = new groupPage();
+module.exports = new resumePage();

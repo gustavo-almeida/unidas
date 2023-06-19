@@ -1,5 +1,6 @@
 const groupPage = require("./pages/groupPage");
 const homePage = require("./pages/homePage");
+const identificationPage = require("./pages/identificationPage");
 const resumePage = require("./pages/resumePage");
 
 describe("unidas reservation", () => {
@@ -22,7 +23,7 @@ describe("unidas reservation", () => {
     resumePage.tituloPaginaExibido();
   });
 
-  it.only("Validar seleção de proteções e serviços de veículos", () => {
+  it("Validar seleção de proteções e serviços de veículos", () => {
     homePage.selecionaLocalRetirada("Copacabana");
     homePage.selecionaDataDaReserva();
     homePage.clicaEmAlugar();
@@ -30,5 +31,6 @@ describe("unidas reservation", () => {
     resumePage.selecionarAlgumasProtecoes();
     resumePage.selecionarServicoBebeConforto();
     resumePage.clicarBotaoAvancar();
+    identificationPage.tituloPaginaExibido();
   });
 });
